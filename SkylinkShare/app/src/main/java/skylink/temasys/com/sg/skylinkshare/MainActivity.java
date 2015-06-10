@@ -39,6 +39,9 @@ import sg.com.temasys.skylink.sdk.rtc.SkylinkConnection;
 /**
  * Simple application demonstrating the use of
  * Android Media Projection API and Skylink for Android
+ *
+ * Media projection code referred from
+ * https://github.com/mtsahakis/MediaProjectionDemo
  */
 public class MainActivity extends Activity
         implements RemotePeerListener, DataTransferListener, LifeCycleListener {
