@@ -4,4 +4,4 @@
 2. Obtain [developer key](http://developer.temasys.com.sg)
 3. The device sharing the screen needs to run API level 21 and above
 
-![Demo](http://postimg.org/image/65buczjun/)
+![](receiver_device.gif?raw=true)
