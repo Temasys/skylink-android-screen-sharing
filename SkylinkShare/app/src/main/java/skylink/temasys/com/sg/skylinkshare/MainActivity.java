@@ -1,7 +1,9 @@
 package skylink.temasys.com.sg.skylinkshare;
 
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -30,7 +32,7 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.nio.ByteBuffer;
 
-import sg.com.temasys.skylink.sdk.config.SkylinkConfig;
+import sg.com.temasys.skylink.sdk.rtc.SkylinkConfig;
 import sg.com.temasys.skylink.sdk.listener.DataTransferListener;
 import sg.com.temasys.skylink.sdk.listener.LifeCycleListener;
 import sg.com.temasys.skylink.sdk.listener.RemotePeerListener;
@@ -85,6 +87,11 @@ public class MainActivity extends Activity
                 Settings.Secure.ANDROID_ID);
 
         //Initialize skylinkConnection and connect to the room
+        if(APP_KEY.isEmpty()||APP_SECRET.isEmpty()){
+            showInitializationFailedAlert();
+            return;
+        }
+
         initializeSkylinkConnection();
         skylinkConnection.connectToRoom(APP_SECRET, ROOM_NAME, deviceId);
 
@@ -97,6 +104,19 @@ public class MainActivity extends Activity
                 Looper.loop();
             }
         }.start();
+    }
+
+    private void showInitializationFailedAlert() {
+        AlertDialog.Builder alertBuilder = new AlertDialog.Builder(this);
+        alertBuilder.setMessage(R.string.dialog_init_fail).setPositiveButton(
+                getString(R.string.ok), new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        finish();
+                    }
+                });
+
+        alertBuilder.show();
     }
 
     @Override
