@@ -1,7 +1,18 @@
 .gradle
+*.iml
 /local.properties
 /.idea/workspace.xml
 /.idea/libraries
 .DS_Store
 /build
+.externalNativeBuild
+
+# Android Studio captures folder
+captures/
 /captures
+
+# Android Studio Navigation editor temp files
+.navigation/
+
+# Keystore files
+*.jks
