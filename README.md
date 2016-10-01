@@ -1,10 +1,10 @@
 # skylink-android-screen-sharing
 
 ## About this project
-This application uses Android [MediaProjection](https://developer.android.com/reference/android/media/projection/MediaProjection.html) (available from API level 21 onwards) to capture screenshots, which are sent to a remote Peer using the SkylinkConnection.[sendData](https://cdn.temasys.com.sg/skylink/skylinksdk/android/latest/doc/reference/sg/com/temasys/skylink/sdk/rtc/SkylinkConnection.html#sendData%28java.lang.String,%20byte[]%29) method.
+This project uses Android [MediaProjection](https://developer.android.com/reference/android/media/projection/MediaProjection.html) (available from API level 21 onwards) to capture screenshots, which are sent to a remote Peer using the SkylinkConnection.[sendData](https://cdn.temasys.com.sg/skylink/skylinksdk/android/latest/doc/reference/sg/com/temasys/skylink/sdk/rtc/SkylinkConnection.html#sendData%28java.lang.String,%20byte[]%29) method.
 The remote Peer receives each screenshot and render it in an ImageView.
 
-The screensharing effect acheived here is a demonstration of a possible use case of SkylinkConnection.sendData, and is not compatible with the screensharing functionality on other Skylink SDKs, including the Skylink JS SDKs's [shareScreen](https://cdn.temasys.com.sg/skylink/skylinkjs/latest/doc/classes/Skylink.html#method_shareScreen).
+The screensharing effect achieved here is a demonstration of a possible use case of SkylinkConnection.sendData, and is not compatible with the screensharing functionality on other Skylink SDKs, including the Skylink JS SDK's [shareScreen](https://cdn.temasys.com.sg/skylink/skylinkjs/latest/doc/classes/Skylink.html#method_shareScreen).
 
 ## Pre-requisites
 
@@ -24,7 +24,7 @@ The device sharing the screen needs to run API level 21 and above.
 Please feel free to reach out to us with feedback or feature requests regarding Skylink on our [support portal](http://support.temasys.com.sg)
 
 
-## Other resourcess
+## Other resources
 
 Product website : https://skylink.io/android
 SkylinkSDK for Android's Sample app: https://github.com/Temasys/skylink-android-sample
