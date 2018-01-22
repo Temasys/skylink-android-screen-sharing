@@ -1,5 +1,9 @@
 # skylink-android-screen-sharing
 
+## Deprecation warning
+This demo uses a past version of Skylink SDK for Android, which is no longer the best version to use.
+For current SDK and its usage, please see information at [Other resources](#other-resources) below.
+
 ## About this project
 This project uses Android [MediaProjection](https://developer.android.com/reference/android/media/projection/MediaProjection.html) (available from API level 21 onwards) to capture screenshots, which are sent to a remote Peer using the SkylinkConnection.[sendData](https://cdn.temasys.com.sg/skylink/skylinksdk/android/latest/doc/reference/sg/com/temasys/skylink/sdk/rtc/SkylinkConnection.html#sendData%28java.lang.String,%20byte[]%29) method.
 The remote Peer receives each screenshot and render it in an ImageView.
@@ -27,7 +31,10 @@ Please feel free to reach out to us with feedback or feature requests regarding 
 ## Other resources
 
 Product website : https://skylink.io/android
+
 SkylinkSDK for Android's Sample app: https://github.com/Temasys/skylink-android-sample
+
+To be notified of new product releases, please subscribe to our [Release Notes](http://support.temasys.com.sg/support/solutions/articles/12000012359-how-can-i-subscribe-to-release-notes-for-skylink-).
 
 ## Copyright and License
 
